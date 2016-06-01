@@ -23,9 +23,9 @@ class TVShowsController extends Controller
     return view('welcome', compact('tvshow'));
   }
 
-  public function getTVShowByQuery($query) {
+  public function getTVShowByQuery(Request $request) {
     $client = new Client();
-    $request = $client->request('GET', 'http://api.tvmaze.com/singlesearch/shows?q=' . $query)->getBody();
+    $request = $client->request('GET', 'http://api.tvmaze.com/singlesearch/shows?q=' . $request)->getBody();
     $tvshow = json_decode($request);
 
     $tvshow = $this->getFanart($tvshow);

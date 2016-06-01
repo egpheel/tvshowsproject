@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/shows/{id}', ['uses' => 'TVShowsController@getTVShowByID', 'as' => 'show.info']);
-Route::get('/shows/search/{query}', ['uses' => 'TVShowsController@getTVShowByQuery', 'as' => 'show.search']);
+Route::get('/shows/search', ['uses' => 'TVShowsController@getTVShowByQuery', 'as' => 'show.search']);

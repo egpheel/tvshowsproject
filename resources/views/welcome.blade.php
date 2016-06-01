@@ -16,6 +16,9 @@
     <div class="container">
       <div class="content">
         <div class="title">TV Shows Project</div>
+        {!! Form::open(['route' => 'show.search']) !!}
+          {!! Form::text('search', 'Search TV Show', ['class' => 'form-control']) !!}
+        {!! Form::close() !!}
         @if (isset($tvshow))
           <div class="info">
             <p>{{ $tvshow->name }}</p>
