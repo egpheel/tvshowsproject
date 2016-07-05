@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
 
 Route::get('/shows/{id}', ['uses' => 'TVShowsController@getTVShowByID', 'as' => 'show.info']);
-Route::get('/shows/', ['uses' => 'TVShowsController@searchTVShow', 'as' => 'show.search']);
+Route::post('/shows', ['uses' => 'TVShowsController@searchTVShow', 'as' => 'show.search']);
