@@ -36,8 +36,9 @@ function setTVShow(img, speed) {
   $('.searching').fadeOut(1000);
 
   $('.title-container').animate({
-    height: "280px",
-    paddingTop: "15px"
+    height: "244px",
+    paddingTop: "15px",
+    marginTop: "-150px"
   }, speed);
   $('.title').animate({
     marginBottom: "20px"
